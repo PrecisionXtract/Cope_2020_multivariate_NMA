@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: |
           install.packages(c("remotes"))
-          install_github("jeff-m-sullivan/lintr@improved-gha-logging")
+          remotes::install_github("jeff-m-sullivan/lintr@improved-gha-logging")
         shell: Rscript {0}
 
       - name: Lint
