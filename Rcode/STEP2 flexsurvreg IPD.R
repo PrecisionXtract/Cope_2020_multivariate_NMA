@@ -103,7 +103,7 @@ for (k in 1:dim(files_split)[1]){
         if (modellist[j]=='llogis'){
           modelx=data.frame(surv_model$res)
           modelx$param[1]=log(1/surv_model$res[2,1])
-          modelx$param[2]=surv_model$res[1,1]
+          modelx$param[2]=log(surv_model$res[1,1])
           param.list[[j]][i,1:length(surv_model$res[,1])]=modelx$param
         }
         
